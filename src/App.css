@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+.btn-primary {
+background-color: #0b5f0f;
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.btn-success:hover {
+background-color: #a71717;
+}
+.btn-success{
+background-color: #0b5f0f;
+}
+
+.navbar-expand-lg {
+    background-color: #0b5f0f;
+}
+
+.custom-link:hover {         /* Change text color on hover */
+  background-color: #eaeaea; /* Optional: add background on hover */
+   /* Optional: underline on hover */
+   color: #000000;
+   font-weight: bold;  
+}
+
+.disabled {
+  background-color: #a71717; /* Disable pointer events */
+}
