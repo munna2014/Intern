@@ -1,0 +1,113 @@
+export const mockUsers = {
+    admin: {
+      id: 'admin',
+      name: 'Admin User',
+      username: 'admin',
+      role: 'admin',
+      email: 'admin@company.com',
+      avatar: 'A',
+      upcomingShifts: [],
+      announcements: [
+        { id: 1, title: 'Admin Notice', message: 'Welcome to the admin dashboard.', time: '1 min ago', avatar: 'AU', priority: 'high' },
+      ],
+      shiftRequests: [],
+      scheduledShifts: [
+        { day: 1, time: 'N/A', location: 'All Locations', type: 'Admin Oversight' },
+        { day: 2, time: 'N/A', location: 'All Locations', type: 'Admin Oversight' },
+        { day: 3, time: 'N/A', location: 'All Locations', type: 'Admin Oversight' },
+      ],
+    },
+    john: {
+      id: 'john',
+      name: 'John Smith',
+      role: 'Regional Assistant Manager',
+      email: 'john.smith@company.com',
+      avatar: 'JS',
+      upcomingShifts: [
+        { day: 'Mon', time: '8am–6pm', color: 'from-blue-500 to-blue-600', type: 'Full Shift' },
+        { day: 'Tue', time: '8am–6pm', color: 'from-blue-500 to-blue-600', type: 'Full Shift' },
+        { day: 'Wed', time: '6pm–12am', color: 'from-indigo-500 to-indigo-600', type: 'Evening' },
+        { day: 'Thu', time: 'OFF', color: 'from-gray-400 to-gray-500', type: 'Day Off' },
+        { day: 'Fri', time: '8am–6pm', color: 'from-blue-500 to-blue-600', type: 'Full Shift' },
+        { day: 'Sat', time: '6pm–12am', color: 'from-indigo-500 to-indigo-600', type: 'Evening' },
+        { day: 'Sun', time: 'OFF', color: 'from-gray-400 to-gray-500', type: 'Day Off' },
+      ],
+      announcements: [
+        { id: 1, title: 'Schedule Update', message: 'New shift schedule for next week is now available', time: '2 hours ago', avatar: 'JD', priority: 'high' },
+        { id: 2, title: 'Training Session', message: 'Mandatory training this Friday at 2PM', time: '5 hours ago', avatar: 'SM', priority: 'medium' },
+      ],
+      shiftRequests: [
+        { id: 1, date: 'Dec 20', time: '6pm–12am', location: 'Downtown Branch', status: 'pending', requester: 'Sarah K.' },
+        { id: 2, date: 'Dec 25', time: '8am–6pm', location: 'Main Office', status: 'pending', requester: 'Mike R.' },
+        { id: 3, date: 'Dec 28', time: '10am–4pm', location: 'West Branch', status: 'pending', requester: 'Emma L.' },
+        { id: 4, date: 'Dec 31', time: '8pm–2am', location: 'Downtown Branch', status: 'pending', requester: 'Chris P.' },
+      ],
+      scheduledShifts: [
+        { day: 3, time: '9am-5pm', location: 'Main Office', type: 'Office Shift' },
+        { day: 5, time: '9am-5pm', location: 'Main Office', type: 'Office Shift' },
+        { day: 10, time: '1pm-9pm', location: 'West Branch', type: 'Late Shift' },
+        { day: 12, time: '9am-5pm', location: 'Main Office', type: 'Office Shift' },
+        { day: 17, time: '9am-1pm', location: 'Downtown Branch', type: 'Morning Shift' },
+      ],
+    },
+    sarah: {
+      id: 'sarah',
+      name: 'Sarah Connor',
+      role: 'Shift Supervisor',
+      email: 'sarah.connor@company.com',
+      avatar: 'SC',
+      upcomingShifts: [
+        { day: 'Mon', time: 'OFF', color: 'from-gray-400 to-gray-500', type: 'Day Off' },
+        { day: 'Tue', time: '10am–7pm', color: 'from-green-500 to-green-600', type: 'Mid Shift' },
+        { day: 'Wed', time: '10am–7pm', color: 'from-green-500 to-green-600', type: 'Mid Shift' },
+        { day: 'Thu', time: '10am–7pm', color: 'from-green-500 to-green-600', type: 'Mid Shift' },
+        { day: 'Fri', time: 'OFF', color: 'from-gray-400 to-gray-500', type: 'Day Off' },
+        { day: 'Sat', time: '12pm–8pm', color: 'from-yellow-500 to-yellow-600', type: 'Weekend Shift' },
+        { day: 'Sun', time: '12pm–8pm', color: 'from-yellow-500 to-yellow-600', type: 'Weekend Shift' },
+      ],
+      announcements: [
+        { id: 1, title: 'Holiday Bonus', message: 'Holiday bonuses will be paid out next Friday.', time: '1 day ago', avatar: 'HR', priority: 'high' },
+        { id: 2, title: 'New Uniforms', message: 'Please pick up your new uniforms from HR.', time: '3 days ago', avatar: 'HR', priority: 'low' },
+      ],
+      shiftRequests: [
+        { id: 1, date: 'Dec 24', time: '10am–4pm', location: 'West Branch', status: 'pending', requester: 'John S.' },
+        { id: 2, date: 'Dec 26', time: '9am-5pm', location: 'Main Office', status: 'pending', requester: 'David H.' },
+        { id: 3, date: 'Dec 27', time: '11am-7pm', location: 'Downtown Branch', status: 'pending', requester: 'Laura M.' },
+      ],
+      scheduledShifts: [
+        { day: 2, time: '10am-7pm', location: 'Main Office', type: 'Mid Shift' },
+        { day: 4, time: '10am-7pm', location: 'Main Office', type: 'Mid Shift' },
+        { day: 6, time: '10am-7pm', location: 'West Branch', type: 'Mid Shift' },
+        { day: 9, time: '12pm-8pm', location: 'Main Office', type: 'Weekend Shift' },
+        { day: 11, time: '12pm-8pm', location: 'Downtown Branch', type: 'Weekend Shift' },
+      ],
+    },
+    default: {
+        id: 'default',
+        name: 'Staff Member',
+        role: 'Employee',
+        email: 'staff@company.com',
+        avatar: 'SM',
+        upcomingShifts: [
+            { day: 'Mon', time: '9am-5pm', color: 'from-gray-500 to-gray-600', type: 'Standard' },
+            { day: 'Tue', time: '9am-5pm', color: 'from-gray-500 to-gray-600', type: 'Standard' },
+            { day: 'Wed', time: '9am-5pm', color: 'from-gray-500 to-gray-600', type: 'Standard' },
+            { day: 'Thu', time: '9am-5pm', color: 'from-gray-500 to-gray-600', type: 'Standard' },
+            { day: 'Fri', time: '9am-5pm', color: 'from-gray-500 to-gray-600', type: 'Standard' },
+            { day: 'Sat', time: 'OFF', color: 'from-gray-400 to-gray-500', type: 'Day Off' },
+            { day: 'Sun', time: 'OFF', color: 'from-gray-400 to-gray-500', type: 'Day Off' },
+        ],
+        announcements: [
+            { id: 1, title: 'Welcome!', message: 'Welcome to StaffFlow. Check your schedule and complete your profile.', time: '1 hour ago', avatar: 'SF', priority: 'medium' },
+        ],
+        shiftRequests: [
+          { id: 1, date: 'Dec 29', time: '9am-1pm', location: 'West Branch', status: 'pending', requester: 'System' },
+          { id: 2, date: 'Jan 05', time: '10am-2pm', location: 'Demo Location', status: 'pending', requester: 'Demo Admin' },
+        ],
+        scheduledShifts: [
+            { day: 1, time: '9am-5pm', location: 'Main Office', type: 'Standard' },
+            { day: 2, time: '9am-5pm', location: 'Main Office', type: 'Standard' },
+            { day: 3, time: '9am-5pm', location: 'Main Office', type: 'Standard' },
+        ],
+    }
+};
