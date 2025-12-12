@@ -36,7 +36,7 @@ services:
     container_name: next-laravel-db
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: ${DB_DATABASE:-laravel}
+      MYSQL_DATABASE: Next-laravel
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-root}
       MYSQL_PASSWORD: ${DB_PASSWORD:-root}
       MYSQL_USER: ${DB_USERNAME:-laravel}
@@ -62,10 +62,28 @@ services:
     volumes:
       - ./frontend:/app
       - /app/node_modules
+    command: npm run dev
     networks:
       - app-network
     depends_on:
       - app
+
+  # Database Management (phpMyAdmin)
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: next-laravel-pma
+    restart: always
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_User: laravel
+      PMA_PASSWORD: root
+    ports:
+      - "8081:80"
+    networks:
+      - app-network
+    depends_on:
+      - db
 
 networks:
   app-network:
