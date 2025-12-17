@@ -1,3 +1,5 @@
+"use client";
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -11,19 +13,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Next Laravel - Modern Full-Stack Platform",
-  description:
-    "A powerful full-stack application built with Next.js and Laravel",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 text-gray-900 min-h-screen relative overflow-x-hidden`}
+        suppressHydrationWarning
       >
-        <div className="app-wrapper">{children}</div>
+        <div className="fixed inset-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-green-300 to-emerald-300 rounded-full filter blur-3xl opacity-30 animate-blob"></div>
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-to-br from-emerald-300 to-teal-300 rounded-full filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-32 left-1/3 w-96 h-96 bg-gradient-to-br from-teal-300 to-cyan-300 rounded-full filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div className="app-wrapper flex flex-col min-h-screen">
+          <main className="flex-grow">{children}</main>
+        </div>
       </body>
     </html>
   );
