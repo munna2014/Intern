@@ -30,10 +30,10 @@ export default function Register() {
 
       const token = response.data.token;
       if (token) {
-        localStorage.setItem("token", token);
+        document.cookie = `token=${token}; path=/; max-age=86400; SameSite=Lax`;
       }
 
-      router.push("/components/customer");
+      router.push("/login");
     } catch (error) {
       if (error.response && error.response.status === 422) {
         setErrors(error.response.data.errors);

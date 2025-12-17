@@ -29,10 +29,10 @@ export default function Login() {
       // Adjust based on typical Laravel API resource response.
       // Often keys are data.token or just token.
 
-      const token = response.data.token || response.data.access_token;
+      const token = response.data.token;
 
       if (token) {
-        localStorage.setItem("token", token);
+        document.cookie = `token=${token}; path=/; max-age=86400; SameSite=Lax`;
       }
 
       router.push("/components/customer");

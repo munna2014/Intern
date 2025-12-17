@@ -19,10 +19,10 @@ const handleSubmit = async (e) => {
   // ... validation logic
   // Sends POST request to Laravel API
   const response = await api.post("/register", {
-    name: "John Doe",
-    email: "john@example.com",
-    password: "secretpassword",
-    password_confirmation: "secretpassword",
+    name: " ",
+    email: " ",
+    password: " ",
+    password_confirmation: " ",
   });
   // ... handle response
 };
@@ -30,7 +30,7 @@ const handleSubmit = async (e) => {
 
 #### **Step 2: API Route Handling (Laravel)**
 
-Laravel receives the request at `routes/api.php`:
+Laravel receives the request at `routes/api.php`:   
 
 ```php
 Route::post('/register', [AuthController::class, 'register']);
